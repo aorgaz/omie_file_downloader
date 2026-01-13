@@ -17,7 +17,9 @@ FILE_TYPES = {
     "pdbc": {"freq": "monthly", "exts": [".zip"]},
     "pdvd": {"freq": "monthly", "exts": [".zip"]},
     "pibci": {"freq": "monthly", "exts": [".zip"]},
-    "trades": {"freq": "monthly", "exts": [".zip"]}
+    "trades": {"freq": "monthly", "exts": [".zip"]},
+    "phf": {"freq": "monthly", "exts": [".zip"]},
+    "phfc": {"freq": "monthly", "exts": [".zip"]}
 }
 
 def log_error(message):
@@ -72,7 +74,7 @@ def run_downloader():
 
         # Monthly Logic
         if curr.day == 1:
-            for key in ["pdbc", "pdvd", "pibci", "trades"]:
+            for key in ["pdbc", "pdvd", "pibci", "trades", "phf", "phfc"]:
                 fn = f"{key}_{curr.strftime('%Y%m')}.zip"
                 tasks.append((key, fn))
             
