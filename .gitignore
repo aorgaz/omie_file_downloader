@@ -36,3 +36,10 @@ __pycache__/
 # Example: config.json (If it contains API keys)
 # Example: .env        (For secret environment variables)
 
+#Ignore OMIE data
+omie_data/
+
+#Ignore errors log
+download_errors.log
+
+
